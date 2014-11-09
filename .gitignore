@@ -1,0 +1,11 @@
+.DS_Store
+.project
+.settings/
+node_modules/
+data/
+.idea/
+gameLive.iml
+module/*.iml
+*.iml
+src/
+config.js
