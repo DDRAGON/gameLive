@@ -8,7 +8,6 @@ var lastCardPassedTimeSec = 0.0;
 var readQRCodeIntervalTimeMSec = 50;
 
 function sendImage(image) {
-	if (image == 'ng') image = 'nextGame';
 	socket.emit('imageSendWithPassWord', {
 		image: image,
 		passWord: $('#inputArea').val()

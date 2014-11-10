@@ -36,6 +36,7 @@ var equipments = ['torch','holyGrail','vorpalSword','dragonLance','knightShield'
 var monstersShort   = ['gb','sk','or','va','go','li','de','dr'];
 var equipmentsShort = ['to','ho','vo','dl','kn','pl'];
 var options = ['pass', 'resetGame', 'nextGame'];
+var optionsShort = ['pa', 'rg', 'ng'];
 var imageName = monsters.concat(equipments).concat(['you']);
 var images = {};
 
@@ -53,7 +54,7 @@ function sendImage(image) {
 	}
 	var indexNum = options.indexOf(image);
 	if (indexNum >= 0) {
-		socket.emit('imageSend', options[indexNum]);
+		socket.emit('imageSend', optionsShort[indexNum]);
 		sound();
 	}
 }
@@ -342,7 +343,7 @@ function drawVorpalSelect(state, vorpalSelect) {
 		return;
 	}
 	if (state == 'waitingVorpalSelect') {
-		var drawText = 'Selecting Vorpal Sword target.';
+		var drawText = 'Selecting Vorpal  target.';
 		for (var i=0; i<clockCount%5; i++) drawText += '.';
 		config.ctx.fillText(drawText, drawX, drawY);
 	}

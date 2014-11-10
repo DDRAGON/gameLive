@@ -28,9 +28,9 @@ function gotImage(socketId, image)
 		clients[socketId].frontObj.state = 'gaming';
 	}
 	switch (image) {
-		case 'pass': gotPass(socketId); break;
-		case 'nextGame': gotNextGame(socketId); break;
-		case 'resetGame': gotResetGame(socketId); break;
+		case 'pa': gotPass(socketId); break;
+		case 'ng': gotNextGame(socketId); break;
+		case 'rg': gotResetGame(socketId); break;
 		default : gotCard(socketId, image); break;
 	}
 }
